@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('theme.admin.app');
+    return view('welcome');
 });
+
+Route::get('my-account', function () {
+    return view('welcome');
+});
+

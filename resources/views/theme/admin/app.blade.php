@@ -90,6 +90,13 @@
     <script src="{{asset("assets/admin/js/waves.js")}}"></script>
     <!--Menu sidebar -->
     <script src="{{asset("assets/admin/js/sidebarmenu.js")}}"></script>
+    <!--Plugins -->
+    <script src="{{asset("assets/admin/libs/jquery-validation/dist/jquery.validate.min.js")}}"></script>
+    <script src="{{asset("assets/admin/libs/jquery-validation/localization/messages_es.js")}}"></script>
+    <!--Page Plugins -->
+    @yield("scriptsPlugins")
+    <!--Page Scripts -->
+    @yield("scripts")
     <!--Custom JavaScript -->
     <script src="{{asset("assets/admin/js/custom.min.js")}}"></script>
 </body>
