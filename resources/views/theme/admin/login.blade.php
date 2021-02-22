@@ -45,7 +45,7 @@
                         <span class="db"><img src="{{asset("assets/admin/images/logo.png")}}" alt="logo" /></span>
                     </div>
                     <!-- Form -->
-                    @if ($error->any())
+                    @if ($errors->any())
                         <x-alert type="danger" :message="$errors" />
                     @endif
                     <form class="form-horizontal m-t-20" id="loginform" action="{{route("login")}}" method="post">
