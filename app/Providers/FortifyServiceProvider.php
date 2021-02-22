@@ -42,8 +42,9 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::authenticateUsing(function (Request $request) {
             $user = User::where('email', $request->email)->first();
             if ($user && Hash::check($request->password, $user->password)) {
-                $ranks = $user->ranks()->get();
-                if ($ranks->isNotEmpty()) {
+                $ranks = $user->ranks()->first();
+                if ($ranks) {
+                    $request->session()->put('rank_slug', $ranks->slug);
                     return $user;
                 }
                 return false;

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MenuController;
+use App\Http\Controllers\Backend\MenuController;
 use App\Http\Controllers\MyAccountController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('my-account', [MyAccountController::class, 'index'])->middleware('auth')->name('my-account');
 
-Route::group(['prefix' => 'admin-backend', 'middleware' => ['auth', 'superadmin']], function() {
+Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'superadmin']], function() {
     Route::get('menu', [MenuController::class, 'index'])->name('menu');
     Route::get('menu/create', [MenuController::class, 'create'])->name('menu.create');
     Route::get('menu/{id}/edit', [MenuController::class, 'edit'])->name('menu.edit');

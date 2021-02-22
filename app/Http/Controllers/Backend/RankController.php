@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
+use App\Http\Controllers\Controller;
+use App\Models\Rank;
 use Illuminate\Http\Request;
 
-class MenuController extends Controller
+class RankController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -40,10 +42,10 @@ class MenuController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Rank  $rank
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Rank $rank)
     {
         //
     }
@@ -51,10 +53,10 @@ class MenuController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Rank  $rank
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Rank $rank)
     {
         //
     }
@@ -63,10 +65,10 @@ class MenuController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Rank  $rank
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Rank $rank)
     {
         //
     }
@@ -74,10 +76,10 @@ class MenuController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Rank  $rank
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Rank $rank)
     {
         //
     }
